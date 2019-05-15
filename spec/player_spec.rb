@@ -14,12 +14,11 @@ describe "Player" do
   end
 
   it "can roll any number of dice at the same time" do
-    expect(player.how_many(4)).to all( be_between(1, 6))
+    expect(player.how_many(4)).to all(be_between(1, 6))
   end
 
   it "can see the result of each dice roll" do
     player.how_many(3)
-    expect(player.knows_result.any? {|hash| hash[:roll] > 0 && hash[:roll] < 7}).to be true
-   
+    expect(player.knows_result.any? { |hash| hash[:roll] > 0 && hash[:roll] < 7 }).to be true
   end
 end

@@ -12,12 +12,12 @@ class Player
     number.times do
       @rolling.push(roll_a_dice)
     end
-    @rolls = @rolling
+    @rolling
   end
 
   def knows_result
     hash_result = []
-    for i in 1..@rolls.length
+    for i in 1..@rolling.length
       hash_result << { roll: i, value: @rolling[i - 1] }
       i += 1
     end
