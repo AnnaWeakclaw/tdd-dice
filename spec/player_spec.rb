@@ -9,7 +9,8 @@ describe "Player" do
   end
 
   it "can roll a random number between 1 and 6" do
-    expect(player.roll_a_dice).to be_between(1, 6)
+    srand(4) #good for testing random generation
+    expect(player.roll_a_dice).to eq(3)
   end
 
   it "can roll any number of dice at the same time" do
